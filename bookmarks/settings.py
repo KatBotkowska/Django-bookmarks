@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     'moja-witryna.pl',
     'localhost',
     '127.0.0.1',
+    'a4bc4767.ngrok.io',
 ]
 
 # Application definition
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social_django',
+    'images',
 
 ]
 

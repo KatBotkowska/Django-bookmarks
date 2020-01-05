@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf import settings
-from django.conf.urls.static import static #static not for production!!!
+from django.conf.urls.static import static  # static not for production!!!
 from django.urls import include, path
 
 urlpatterns = [
@@ -23,6 +23,7 @@ urlpatterns = [
     path('account/', include('account.urls')),
     path('', include('django.contrib.auth.urls')),
     path('social-auth/', include('social_django.urls', namespace='social')),
+    path('images/', include('images.urls', namespace='images')),
 ]
 
 if settings.DEBUG:

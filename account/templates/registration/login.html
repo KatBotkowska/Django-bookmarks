@@ -5,7 +5,8 @@
     {% if form.errors %}
         <p>User name or password not correct. Try again</p>
     {% else %}
-        <p>Fill the form to log in. If you dont't have account, you can create one <a href="{% url 'register' %}">here.</a> </p>
+        <p>Fill the form to log in. If you dont't have account, you can create one <a
+                href="{% url 'register' %}">here.</a></p>
     {% endif %}
     <div class="login-form">
         <form action="{% url 'login' %}" method="post">
@@ -14,6 +15,13 @@
             <input type="hidden" name="next" value="{{ next }}">
             <p><input type="submit" value="Log in"></p>
         </form>
-    <p><a href="{% url 'password_reset' %}">Forgot your password?</a> </p>
+        <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
+    </div>
+    <div class="social">
+        <ul>
+            <li class="facebook"><a href="{% url "social:begin" "facebook" %}">Log in with Facebook account</a></li>
+            <li class="google"><a href="{% url "social:begin" "google-oauth2" %}">Log in with Google account</a></li>
+            <li class="twitter"><a href="{% url "social:begin" "github" %}">Log in with Github account</a></li>
+        </ul>
     </div>
 {% endblock %}
